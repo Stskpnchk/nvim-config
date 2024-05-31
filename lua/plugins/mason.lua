@@ -9,7 +9,18 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "rust_analyzer", "ruff", "ruff_lsp", "tsserver", "pyright", "emmet_language_server" },
+				ensure_installed = {
+					"lua_ls",
+					"rust_analyzer",
+					"ruff",
+					"ruff_lsp",
+					"tsserver",
+					"pyright",
+					"emmet_language_server",
+					"vscode-eslint",
+					"jdtls",
+					"kotlin_language_server",
+				},
 			})
 		end,
 	},
@@ -23,6 +34,9 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.rust_analyzer.setup({
+				capabilities = capabilities,
+			})
 			lspconfig.ruff.setup({
 				capabilities = capabilities,
 			})
@@ -33,6 +47,15 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.pyright.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.emmet_language_server.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.jdtls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.kotlin_language_server.setup({
 				capabilities = capabilities,
 			})
 
@@ -51,7 +74,7 @@ return {
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 			vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
 			vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, opts)
-            vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts)
+			vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts)
 		end,
 	},
 }
