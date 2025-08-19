@@ -1,0 +1,6 @@
+[DEFAULT]
+user=ocid1.user.oc1..aaaaaaaa7ddusogb7omh76edlmuxi5bgc6zva3wrjnxl5isrogfeuutslara
+fingerprint=6e:c3:0c:4b:2e:b5:94:54:dd:de:17:5e:b4:c9:b7:a9
+key_file=/home/spinchuk-cw/.oci/oci_api_key.pem
+tenancy=ocid1.tenancy.oc1..aaaaaaaasv7eap3s4kigiem7oxb2ir6ylfqnrumvl5xqtzdkuiduzemstjxq
+region=us-ashburn-1
