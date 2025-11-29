@@ -20,6 +20,7 @@ return {
                     "jdtls",
                     "kotlin_language_server",
                     "eslint",
+                    "ansible-language-server",
                 },
             })
         end,
@@ -45,14 +46,14 @@ return {
             })
             lspconfig.pyright.setup({
                 capabilities = capabilities,
-                pyright = {
-                    disableOrganizeImports = true,
-                },
-                python = {
-                    ignore = {
-                        "*",
-                    },
-                },
+                -- pyright = {
+                --     disableOrganizeImports = true,
+                -- },
+                -- python = {
+                --     ignore = {
+                --         "*",
+                --     },
+                -- },
             })
             lspconfig.emmet_language_server.setup({
                 capabilities = capabilities,
@@ -63,6 +64,8 @@ return {
             lspconfig.kotlin_language_server.setup({
                 capabilities = capabilities,
             })
+
+            lspconfig.ansible_language_server.setup({})
             -- lspconfig.eslint.setup({
             -- 	capabilities = capabilities,
             -- })

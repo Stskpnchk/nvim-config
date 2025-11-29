@@ -4,9 +4,9 @@ return {
 		lazy = false,
 		name = "catppuccin",
 		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme("catppuccin-latte")
-		end,
+		-- config = function()
+		-- 	vim.cmd.colorscheme("catppuccin-latte")
+		-- end,
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
@@ -27,4 +27,13 @@ return {
 		-- 	vim.cmd.colorscheme("solarized")
 		-- end,
 	},
+    {
+        "NLKNguyen/papercolor-theme",
+        lazy = false,
+        priority = 1000,
+		config = function()
+			vim.o.background = "light"
+			vim.cmd.colorscheme("PaperColor")
+		end,
+    }
 }

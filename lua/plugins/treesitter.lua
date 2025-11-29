@@ -6,8 +6,8 @@ return {
 		config.setup({
 			ensure_installed = { "lua", "python", "javascript", "typescript", "html", "java", "tsx", "jsdoc" },
 			auto_install = true,
-			highlight = { enabled = true },
-			indent = { enabled = true },
+			highlight = { enable = true },
+			indent = { enable = true },
 			autotag = {
 				enabled = true,
 			},
