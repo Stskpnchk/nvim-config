@@ -16,12 +16,12 @@ return {
                     "ts_ls",
                     "pyright",
                     "emmet_language_server",
-                    -- "vscode-eslint",
                     "jdtls",
                     "kotlin_language_server",
                     "eslint",
-                    "ansible-language-server",
+                    "ansiblels",
                 },
+                automatic_enable = true,
             })
         end,
     },
@@ -30,45 +30,24 @@ return {
         lazy = false,
         config = function()
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
-            local lspconfig = require("lspconfig")
 
-            lspconfig.lua_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.rust_analyzer.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.ruff.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.ts_ls.setup({
-                -- capabilities = capabilities,
-            })
-            lspconfig.pyright.setup({
-                capabilities = capabilities,
-                -- pyright = {
-                --     disableOrganizeImports = true,
-                -- },
-                -- python = {
-                --     ignore = {
-                --         "*",
-                --     },
-                -- },
-            })
-            lspconfig.emmet_language_server.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.jdtls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.kotlin_language_server.setup({
-                capabilities = capabilities,
-            })
+            local servers = {
+                "lua_ls",
+                "rust_analyzer",
+                "ruff",
+                "ts_ls",
+                "pyright",
+                "emmet_language_server",
+                "jdtls",
+                "kotlin_language_server",
+                "ansiblels",
+            }
 
-            lspconfig.ansible_language_server.setup({})
-            -- lspconfig.eslint.setup({
-            -- 	capabilities = capabilities,
-            -- })
+            for _, server in ipairs(servers) do
+                vim.lsp.config(server, {
+                    capabilities = capabilities,
+                })
+            end
 
             vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, { desc = "Hover info" })
             vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })

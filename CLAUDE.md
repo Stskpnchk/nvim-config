@@ -36,6 +36,7 @@ return {
 | File tree | neo-tree.nvim | `neotree.lua` |
 | Testing | vim-test + vimux (runs tests in tmux panes) | `vim-test.lua` |
 | Debugging | nvim-dap | `debugging.lua` |
+| AI assistant | claudecode.nvim + snacks.nvim | `claudecode.lua` |
 | Theme | PaperColor (active) | `themes.lua` |
 
 ## Keybinding Namespaces
@@ -43,7 +44,8 @@ return {
 Leader is `<Space>`. Bindings are organized by prefix:
 - `<leader>f*` — Telescope (ff=files, fw=grep, fb=buffers)
 - `<leader>l*` — LSP (lh=hover, la=actions, lr=rename, lR=references)
-- `<leader>t/T/a` — Testing (nearest/file/suite)
+- `<leader>a*` — AI/Claude (ac=toggle, af=focus, ar=resume, as=send, ab=buffer, aa=accept, ad=deny)
+- `<leader>t/T` — Testing (nearest/file)
 - `<leader>d*` — Debugging (db=breakpoint, dc=continue)
 - `<leader>gf` — Format buffer
 - `<leader>e` — Toggle neo-tree

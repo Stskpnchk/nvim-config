@@ -14,6 +14,7 @@ return {
             { "<leader>d", group = "Debug" },
             { "<leader>g", group = "Git/Go" },
             { "<leader>w", group = "Workspace" },
+            { "<leader>a", group = "AI/Claude" },
         })
     end,
 }
