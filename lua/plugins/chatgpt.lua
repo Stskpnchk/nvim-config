@@ -12,8 +12,8 @@ return {
             api_key_cmd = "pass show api/keys/chatgpt",
         })
 
-        vim.keymap.set({ "n", "v" }, "<Leader>at", ":ChatGPTRun add_tests<CR>", {})
-        vim.keymap.set({ "n", "v" }, "<Leader>ai", ":ChatGPT<CR>", {})
-        vim.keymap.set("n", "<Leader>ac", ":ChatGPTCompleteCode", {})
+        vim.keymap.set({ "n", "v" }, "<Leader>at", ":ChatGPTRun add_tests<CR>", { desc = "Add tests" })
+        vim.keymap.set({ "n", "v" }, "<Leader>ai", ":ChatGPT<CR>", { desc = "Open ChatGPT" })
+        vim.keymap.set("n", "<Leader>ac", ":ChatGPTCompleteCode", { desc = "Complete code" })
     end,
 }

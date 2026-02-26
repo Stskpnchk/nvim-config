@@ -8,4 +8,4 @@ vim.cmd("set nu rnu")
 vim.cmd("set ignorecase")
 
 -- some default mappings
-vim.keymap.set('n', '|', ':vsp<CR>', {})
+vim.keymap.set('n', '|', ':vsp<CR>', { desc = "Vertical split" })

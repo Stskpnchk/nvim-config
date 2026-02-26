@@ -9,10 +9,10 @@ return {
 
         vim.keymap.set("n", "<Leader>db", function()
             dap.toggle_breakpoint()
-        end, {})
+        end, { desc = "Toggle breakpoint" })
         vim.keymap.set("n", "<Leader>dc", function()
             dap.continue()
-        end, {})
+        end, { desc = "Continue" })
 
         --dap.listeners.before.attach.dapui_config = function()
             --dapui.open()

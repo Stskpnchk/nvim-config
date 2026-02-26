@@ -70,21 +70,20 @@ return {
             -- 	capabilities = capabilities,
             -- })
 
-            local opts = {}
-            vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, opts)
-            vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-            vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-            vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-            vim.keymap.set("n", "<leader>lH", vim.lsp.buf.signature_help, opts)
-            vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts)
-            vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
-            vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-            vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, opts)
-            vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-            vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-            vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
-            vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, opts)
-            vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts)
+            vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, { desc = "Hover info" })
+            vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+            vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+            vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+            vim.keymap.set("n", "<leader>lH", vim.lsp.buf.signature_help, { desc = "Signature help" })
+            vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, { desc = "Add workspace folder" })
+            vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, { desc = "Type definition" })
+            vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "References" })
+            vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Line diagnostics" })
+            vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+            vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+            vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, { desc = "Diagnostics loclist" })
+            vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, { desc = "Code action" })
+            vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, { desc = "Rename symbol" })
         end,
     },
 }
