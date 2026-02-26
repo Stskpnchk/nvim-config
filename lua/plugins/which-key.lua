@@ -12,7 +12,6 @@ return {
             { "<leader>f", group = "Find" },
             { "<leader>l", group = "LSP" },
             { "<leader>d", group = "Debug" },
-            { "<leader>a", group = "AI" },
             { "<leader>g", group = "Git/Go" },
             { "<leader>w", group = "Workspace" },
         })

@@ -30,13 +30,12 @@ return {
 | Subsystem | Plugin(s) | Config file |
 |-----------|-----------|-------------|
 | LSP | mason.nvim + mason-lspconfig + nvim-lspconfig | `mason.lua` |
-| Completion | nvim-cmp + LuaSnip + supermaven | `completions.lua` |
+| Completion | nvim-cmp + LuaSnip | `completions.lua` |
 | Formatting/Linting | none-ls (null-ls) with stylua, prettierd, eslint_d, semgrep | `none-ls.lua` |
 | Fuzzy finder | telescope.nvim | `telescope.lua` |
 | File tree | neo-tree.nvim | `neotree.lua` |
 | Testing | vim-test + vimux (runs tests in tmux panes) | `vim-test.lua` |
 | Debugging | nvim-dap | `debugging.lua` |
-| AI | ChatGPT.nvim + supermaven | `chatgpt.lua`, `supermaven.lua` |
 | Theme | PaperColor (active) | `themes.lua` |
 
 ## Keybinding Namespaces
@@ -46,7 +45,6 @@ Leader is `<Space>`. Bindings are organized by prefix:
 - `<leader>l*` — LSP (lh=hover, la=actions, lr=rename, lR=references)
 - `<leader>t/T/a` — Testing (nearest/file/suite)
 - `<leader>d*` — Debugging (db=breakpoint, dc=continue)
-- `<leader>a*` — AI/ChatGPT
 - `<leader>gf` — Format buffer
 - `<leader>e` — Toggle neo-tree
 - `<leader>/` — Toggle comment
